@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func partition(list []int, start int, end int) int {
+func partition(list []int, start, end int) int {
   bottom := start - 1
   top := end
   pivot := list[end]
@@ -38,7 +38,7 @@ func partition(list []int, start int, end int) int {
   return top
 }
 
-func quicksort(list []int, start int, end int) {
+func quicksort(list []int, start, end int) {
   if start < end {
     split := partition(list, start, end)
     quicksort(list, start, split - 1)
